@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -33,7 +34,6 @@ html {
     font-weight: bold;
     font-size: 1.5em;
     font-style: italic;
-    font-family: Poppins;
     user-select: none;
 }
 
@@ -208,7 +208,6 @@ html {
 }
 
 .container .sidemenu .inputsearch .inp input {
-    font-family: Poppins;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 15px 0;
@@ -302,7 +301,6 @@ html {
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    font-family: Poppins;
     background-color: #0C1358;
     color: white;
     box-shadow: 0 4px 5px 0 rgba(22, 42, 90, 0.1);
