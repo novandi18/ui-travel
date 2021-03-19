@@ -1,0 +1,257 @@
+<!-- 
+    Inspired design by Rian Darma for Pixelz Studio 
+    on Dribble
+    https://dribbble.com/shots/14677571-Doland-Itinerary-Travel-Planner
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelku</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="select.css">
+    <link rel="stylesheet" href="splash.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="splash">
+        <div class="splash-scroll">
+            <div class="splash-box">
+                <div class="title">
+                    <img src="img/favicon.png" alt="logo">
+                    <span>Travelku</span>
+                </div>
+                <div class="desc">
+                    <span>Design website ini terinspirasi dari karya milik <a href="https://dribbble.com/riandarma">Rian Darma</a> untuk <a href="https://dribbble.com/pixelzstudio">Pixelz Studio</a></span>
+                    <span>Yang karyanya terdapat di <a href="https://dribbble.com/shots/14677571-Doland-Itinerary-Travel-Planner"><img src="img/dribbble.svg" width="17">Dribbble</a></span>
+                </div>
+                <div class="photo">
+                    <img src="img/ui.png" alt="design">
+                </div>
+                <div class="accept">
+                    <button type="button" id="btnaccept">Ok mengerti!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <div class="logo">
+                <span>Travelku</span>
+            </div>
+            <div class="subcontent">
+                <div class="title">
+                    <div class="country">
+                        <span>JAPAN</span>
+                    </div>
+                    <div class="temple">
+                        <span>Gunung Salju Fujiyama</span>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="location">
+                        <div class="head">
+                            <span>Lokasi</span>
+                        </div>
+                        <div class="sub">
+                            <span>Tokyo, Japan</span>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <div class="head">
+                            <span>Waktu Kunjung Terbaik</span>
+                        </div>
+                        <div class="sub">
+                            <span>Musim Semi (Maret-Juli)</span>
+                        </div>
+                    </div>
+                    <div class="populer">
+                        <div class="head">
+                            <span>Popularitas</span>
+                        </div>
+                        <div class="sub">
+                            <span>
+                                <i class="fa fa-star" style="color: #EAC84F;"></i>
+                                4.9 (32 review)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button type="button" class="btn-order">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidemenu">
+            <div class="navbar">
+                <div class="menus">
+                    <div class="menu active">
+                        <a href="#">Jelajahi</a>
+                        <div class="bullet"></div>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Tujuan Favorit</a>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Rencana</a>
+                    </div>
+                </div>
+                <div class="gear">
+                    <div class="search" id="showsearch">
+                        <i class="fa fa-search" id="iconsearch"></i>
+                    </div>
+                    <div class="profile">
+                        <div class="image">
+                            <div class="online"></div>
+                            <img src="img/profile.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputsearch" id="inpsearch">
+                <div class="inp">
+                    <input type="text" placeholder="Cari sesuatu">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <button id="btnfilter">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                </div>
+                <div class="filter">
+                    <span>Filter</span>
+                    <div class="filter-list">
+                        <div class="select">
+                            <span>Berdasarkan</span>
+                            <select multiple data-placeholder="Pilih berdasarkan" id="select1">
+                                <option class="option1" value="popular">Popularitas</option>
+                                <option class="option1" value="location">Lokasi</option>
+                                <option class="option1" value="Musim">Musim</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <span>Kategori</span>
+                            <select multiple data-placeholder="Pilih kategori" id="select2">
+                                <option class="option2" value="camping">Camping</option>
+                                <option class="option2" value="kuliner">Kuliner</option>
+                                <option class="option2" value="tour">City Tour</option>
+                                <option class="option2" value="ship">Pesiar</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <span>Negara</span>
+                            <select multiple data-placeholder="Pilih negara" id="select3">
+                                <option class="option3" value="jpn">Japan</option>
+                                <option class="option3" value="idn">Indonesia</option>
+                                <option class="option3" value="skr">South Korea</option>
+                                <option class="option3" value="usa">United States</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button">Simpan</button>
+                </div>
+            </div>
+            
+            <div class="explore">
+                <h1>Jelajahi</h1>
+                <div class="option">
+                    <a href="#" class="active">Populer</a>
+                    <a href="#">Wisata Religi</a>
+                    <a href="#">Wisata Kuliner</a>
+                    <a href="#">Wisata Alam</a>
+                </div>
+                <div class="list" id="0">
+                    <div class="box">
+                        <span class="span1">Kuil Pagoda Tong Samcong</span>
+                        <span class="span2">Hongkong</span>
+                        <img src="img/2.jpg">
+                    </div>
+                    <div class="box">
+                        <span class="span1">Kastil Kozuki Oden</span>
+                        <span class="span2">Turi</span>
+                        <img src="img/3.jpg">
+                    </div>
+                    <div class="box">
+                        <span class="span1">Kiyomizu-dera Temple</span>
+                        <span class="span2">Kyoto</span>
+                        <img src="img/4.jpg">
+                    </div>
+                    <div class="box">
+                        <span class="span1">Kiyomizu-dera Temple</span>
+                        <span class="span2">Kyoto</span>
+                        <img src="img/5.jpg">
+                    </div>
+                    <div class="box">
+                        <span class="span1">Gunung Salju Fujiyama</span>
+                        <span class="span2">Tokyo</span>
+                        <img src="img/1.jpg">
+                    </div>
+                </div>
+                <div class="arrow">
+                    <div class="arrow-btn" id="back">
+                        <i class="fa fa-arrow-left"></i>
+                    </div>
+                    <div class="arrow-btn" id="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">
+                    <h3>Populer Kategori</h3>
+                    <a href="#">Lihat semua</a>
+                </div>
+                <div class="category-list">
+                    <div class="category-box">
+                        <div class="icon">
+                            <img src="img/category/camping.svg" alt="camping">
+                        </div>
+                        <span>Camping</span>
+                        <span>5 wisata</span>
+                    </div>
+                    <div class="category-box">
+                        <div class="icon">
+                            <img src="img/category/kuliner.svg" alt="camping">
+                        </div>
+                        <span>Kuliner</span>
+                        <span>63 wisata</span>
+                    </div>
+                    <div class="category-box">
+                        <div class="icon">
+                            <img src="img/category/city-tour.svg" alt="camping">
+                        </div>
+                        <span>City Tour</span>
+                        <span>47 wisata</span>
+                    </div>
+                    <div class="category-box">
+                        <div class="icon">
+                            <img src="img/category/pesiar.svg" alt="camping">
+                        </div>
+                        <span>Pesiar</span>
+                        <span>25 wisata</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js" integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin="anonymous"></script> -->
+    <script src="jquery.min.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="script.js"></script>
+    <script src="filter.js"></script>
+</body>
+</html>
+
+<!-- 
+    Inspired design by Rian Darma for Pixelz Studio 
+    on Dribble
+    https://dribbble.com/shots/14677571-Doland-Itinerary-Travel-Planner
+-->

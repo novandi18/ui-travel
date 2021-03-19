@@ -1,0 +1,199 @@
+.splash {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    /* backdrop-filter: brightness(50%); */
+    display: flex;
+    justify-content: center;
+    /* animation: backgroundsplash 1s; */
+}
+
+.splash .splash-scroll {
+    background-color: white;
+    margin-top: 10vh;
+    max-width: 60vw;
+    max-height: 0vh;
+    padding: 0px 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    transform-origin: 50% 0;
+    /* animation: hidesplash .3s; */
+    /* transform: scale(.2); */
+}
+
+.splash .splash-box {
+    overflow: auto;
+}
+
+/* Custom scrollbar */
+.splash .splash-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.splash .splash-box::-webkit-scrollbar-track {
+    border-radius: 25px;
+}
+
+.splash .splash-box::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: #ccc;
+}
+
+.splash .splash-box::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+/* End of custom scrollbar */
+
+.splash .splash-box .title {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+/* Title */
+.splash .splash-box .title img {
+    width: 40px;
+}
+
+.splash .splash-box .title span {
+    background: -webkit-linear-gradient(0deg, #0C1358, #2330a3);
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 10px;
+    color: #0C1358;
+}
+
+/* Description */
+.splash .splash-box .desc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.splash .splash-box .desc span a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0C1358;
+    text-shadow: 0 3px 10px rgba(0,0,0,.05);
+    align-items: center;
+    transition: all .3s;
+}
+
+.splash .splash-box .desc span a img {
+    margin-right: 3px;
+    transform: translateY(2px);
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.05);
+    border-radius: 50%;
+}
+
+.splash .splash-box .desc span a:hover {
+    text-shadow: 0 5px 12px rgba(0,0,0,.2);
+    color: #17217c;
+    transition: all .3s;
+}
+
+.splash .splash-box .desc span a img:hover {
+    box-shadow: 0 5px 12px 0 rgba(0,0,0,.2);
+    transition: all .3s;
+}
+
+/* Photo */
+.splash .splash-box .photo {
+    padding: 0 30px;
+}
+
+.splash .splash-box .photo img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* button */
+.splash .splash-box .accept {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.splash .splash-box .accept button {
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    background-color: #0C1358;
+    color: white;
+    border: none;
+    font-family: Poppins;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
+    transition: all .3s;
+}
+
+.splash .splash-box .accept button:hover {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,.3);
+    background-color: #17217c;
+    transition: all .3s;
+}
+
+.splash .splash-box .accept button:active {
+    box-shadow: none;
+    background-color: #0C1358;
+    transition: all .3s;
+}
+
+@keyframes backgroundsplash {
+    0% {
+        backdrop-filter: none;
+    }
+
+    100% {
+        backdrop-filter: brightness(50%);
+    }
+}
+
+@keyframes hidebackgroundsplash {
+    0% {
+        backdrop-filter: brightness(50%);
+    }
+
+    100% {
+        backdrop-filter: none;
+    }
+}
+
+@keyframes showsplash {
+    0% {
+        max-height: 0vh;
+        padding: 0px 10px;
+
+    }
+
+    100% {
+        max-height: 80vh;
+        padding: 15px 10px;
+    }
+}
+
+@keyframes hidesplash {
+    0% {
+        max-height: 80vh;
+        padding: 15px 10px;
+    }
+
+    100% {
+        max-height: 0vh;
+        padding: 0px 10px;
+    
+    }
+    
+}
